@@ -18,8 +18,10 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 - task: UiPathInstallPlatform-preview@2
-- task: UiPathTest@2
+- task: UiPathDeploy@2
   inputs:
-    testTarget: 'TestSet'
-    orchestratorConnection: 'Orquestador'
-    folderName: 'Default'
+    orchestratorConnection:  Service connection to UiPath Orchestrator
+    packagesPath: '$(Build.ArtifactStagingDirectory)\Packages\ITAutomationProcess'
+    folderName: 'ITAutomation'
+    environments: 'AutomationRobots' # Optional
+  displayName: 'Run a multi-line script'
