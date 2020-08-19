@@ -18,9 +18,8 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 - task: UiPathInstallPlatform-preview@2
-- task: UiPathPack@2
+- task: UiPathTest@2
   inputs:
-    versionType: 'AutoVersion'
-    projectJsonPath: 'https://cloud.uipath.com/testcompleted/testcompletedDefault/orchestrator_/packages'
+    testTarget: 'TestSet'
     orchestratorConnection: 'Orquestador'
-    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    folderName: 'https://cloud.uipath.com/testcompleted/testcompletedDefault/orchestrator_/'
