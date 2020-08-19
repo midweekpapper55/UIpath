@@ -21,7 +21,7 @@ steps:
 - task: UiPathDeploy@2
   inputs:
     orchestratorConnection:  Service connection to UiPath Orchestrator
-    packagesPath: '$(Build.ArtifactStagingDirectory)\Packages\ITAutomationProcess'
+    packagesPath: '$(Build.ArtifactStagingDirectory)\Packages\Main'
     folderName: 'ITAutomation'
     environments: 'AutomationRobots' # Optional
   displayName: 'Run a multi-line script'
