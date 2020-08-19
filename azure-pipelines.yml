@@ -18,8 +18,3 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
 - task: UiPathInstallPlatform-preview@2
-- task: UiPathTest@2
-  inputs:
-    testTarget: 'TestSet'
-    orchestratorConnection: 'Orquestador'
-    folderName: 'Default'
